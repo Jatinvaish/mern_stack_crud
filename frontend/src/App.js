@@ -58,7 +58,8 @@ function App() {
     }
 
   }
-  const handleUpdate = async () => {
+  const handleUpdate = async (e) => {
+    e.preventDefault();
     try {
       const data = await axios.put(`${BASE_URL}user/${formDataEdit._id}`, formDataEdit)
       if (data.data.success) { 
